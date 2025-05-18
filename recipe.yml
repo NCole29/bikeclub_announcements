@@ -1,0 +1,25 @@
+name: 'Bikeclub Announcements'
+description: 'Provides Announcement content type.'
+type: 'Content type'
+recipes:
+  - bikeclub_content_type_base
+install:
+  # Contrib.
+  - field_group
+  - scheduler
+config:
+  strict: false
+  import:
+    scheduler: '*'
+  actions:
+    scheduler.settings:
+      simple_config_update:
+        allow_date_only: true
+        default_time: '01:00:00'
+        hide_seconds: true
+        log: false
+    user.role.site_admin:
+      grantPermissions:
+        - 'create announcement content'
+        - 'delete any announcement content'
+        - 'edit any announcement content'
