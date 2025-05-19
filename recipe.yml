@@ -19,7 +19,11 @@ config:
         hide_seconds: true
         log: false
     user.role.site_admin:
+      createIfNotExists:
+        label: 'Site administrator'
       grantPermissions:
         - 'create announcement content'
         - 'delete any announcement content'
         - 'edit any announcement content'
+        - 'use text format basic_html'
+        - 'use text format summary_fields'
