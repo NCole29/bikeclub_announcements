@@ -3,17 +3,35 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.announcement.field_contact_form
+    - field.field.node.announcement.field_contact_person
     - field.field.node.announcement.field_summary
     - field.field.node.announcement.field_text
     - node.type.announcement
   module:
     - text
     - user
+    - user_contactlink
 id: node.announcement.teaser
 targetEntityType: node
 bundle: announcement
 mode: teaser
 content:
+  field_contact_form:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_contact_person:
+    type: entity_reference_contact
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_summary:
     type: text_default
     label: hidden
