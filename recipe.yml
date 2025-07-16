@@ -5,6 +5,7 @@ recipes:
   - bikeclub_content_type_base
 config:
   strict: false
+  actions:
     user.role.site_admin:
       createIfNotExists:
         label: 'Site administrator'
