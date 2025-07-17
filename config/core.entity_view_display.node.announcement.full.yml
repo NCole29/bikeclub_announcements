@@ -9,8 +9,22 @@ dependencies:
     - field.field.node.announcement.field_text
     - node.type.announcement
   module:
+    - layout_builder
+    - layout_builder_restrictions
     - text
     - user
+    - user_contactlink
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.announcement.full
 targetEntityType: node
 bundle: announcement
@@ -21,19 +35,32 @@ content:
     third_party_settings: {  }
     weight: -20
     region: content
+  field_contact_form:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_contact_person:
+    type: entity_reference_contact
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_text:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
 hidden:
-  field_contact_form: true
-  field_contact_person: true
   field_summary: true

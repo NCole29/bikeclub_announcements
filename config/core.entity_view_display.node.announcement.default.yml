@@ -10,7 +10,7 @@ dependencies:
   module:
     - text
     - user
-    - user_contacts
+    - user_contactlink
 id: node.announcement.default
 targetEntityType: node
 bundle: announcement
@@ -31,10 +31,10 @@ content:
     region: content
   field_contact_person:
     type: entity_reference_contact
-    label: inline
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_text:
     type: text_default
