@@ -15,3 +15,8 @@ config:
         - 'edit any announcement content'
         - 'use text format basic_html'
         - 'use text format summary_fields'
+    pathauto.pattern.content:
+      action: 'update' 
+      arguments:
+        bundles:
+          announcement: announcement
