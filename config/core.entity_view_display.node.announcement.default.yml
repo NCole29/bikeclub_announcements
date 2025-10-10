@@ -10,7 +10,6 @@ dependencies:
   module:
     - text
     - user
-    - user_contactlink
 id: node.announcement.default
 targetEntityType: node
 bundle: announcement
