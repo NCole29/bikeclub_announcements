@@ -16,7 +16,6 @@ config:
         - 'use text format basic_html'
         - 'use text format summary_fields'
     pathauto.pattern.content:
-      action: 'update' 
-      arguments:
+      simpleConfigUpdate:
         bundles:
           announcement: announcement
