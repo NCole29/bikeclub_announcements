@@ -174,12 +174,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   promote:
     type: boolean_checkbox
     weight: 1
