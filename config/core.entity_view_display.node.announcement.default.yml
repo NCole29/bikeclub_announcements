@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.announcement.field_text
     - node.type.announcement
   module:
+    - bikeclub
     - text
     - user
 id: node.announcement.default
@@ -15,24 +16,29 @@ targetEntityType: node
 bundle: announcement
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_contact_form:
     type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_contact_person:
     type: user_contact_link
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 3
     region: content
   field_text:
     type: text_default
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
@@ -40,7 +46,7 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 0
     region: content
 hidden:
   field_summary: true
