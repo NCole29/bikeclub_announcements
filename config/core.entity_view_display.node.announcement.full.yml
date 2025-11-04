@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.announcement.field_text
     - node.type.announcement
   module:
-    - bikeclub
     - text
     - user
 id: node.announcement.full
@@ -17,11 +16,6 @@ targetEntityType: node
 bundle: announcement
 mode: full
 content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
   field_contact_form:
     type: entity_reference_label
     label: above

@@ -6,7 +6,7 @@ dependencies:
     - scheduler
 third_party_settings:
   scheduler:
-    expand_fieldset: when_required
+    expand_fieldset: always
     fields_display_mode: fieldset
     publish_enable: true
     publish_past_date: publish
@@ -24,8 +24,8 @@ third_party_settings:
     parent: 'main:'
 name: Announcement
 type: announcement
-description: '<em>Announcements</em> are displayed on the home page for a <strong>scheduled period of time</strong>.<br>To publish immediately, select a "publish on" date in the past.'
-help: '<em>Announcements</em> are published for a <strong>scheduled period of time</strong>. The summary is displayed on the home page where the title links to the full page.'
+description: '<em>Announcements</em> are displayed on the home page for a <strong>scheduled period of time</strong> with a link to <em>Read more</em>. '
+help: '<em>Announcements</em> are published for a <strong>scheduled period of time</strong>. The summary is displayed on the home page with a link to <em>Read more</em>.'
 new_revision: true
 preview_mode: 1
 display_submitted: false
