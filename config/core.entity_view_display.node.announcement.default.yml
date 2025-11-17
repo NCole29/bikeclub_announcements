@@ -4,10 +4,12 @@ dependencies:
   config:
     - field.field.node.announcement.field_contact_form
     - field.field.node.announcement.field_contact_person
+    - field.field.node.announcement.field_resize_text_image
     - field.field.node.announcement.field_summary
     - field.field.node.announcement.field_text
     - node.type.announcement
   module:
+    - bikeclub
     - text
     - user
 id: node.announcement.default
@@ -15,6 +17,11 @@ targetEntityType: node
 bundle: announcement
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_contact_form:
     type: entity_reference_label
     label: inline
@@ -43,4 +50,5 @@ content:
     weight: 0
     region: content
 hidden:
+  field_resize_text_image: true
   field_summary: true
